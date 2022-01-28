@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Covered+By+Your+Grace" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:800" rel="stylesheet">
+
+    <link href="https://assetambee.s3-us-west-2.amazonaws.com/weatherIcons/PNG/icon_name.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@700&family=Playball&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Petemoss&display=swap" rel="stylesheet">
+
+<title>Weather</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="logo"></div>
+        <div class="nameApp">Weather app</div>
+    </div>
+    <br>
+    <hr>
+ 
+    <!--<h1>CURRENT WEATHER</h1>-->
+    <div class="row">
+        <div class="dateTime">
+            <u><h4 id="pokusaj"><i class="fas fa-clock"></i> Date and time</h4></u>
+            <h4 id="date">Date</h4>
+            <h4 id="clock">
+                <span >Time</span>
+            </h4><br>
+        </div>
+
+        <div class="location">
+            <u><h4><i class="fas fa-map-marked-alt"></i>Your location</h4></u>
+            <h4 id="locationTimezone">Timezone</h4>
+            
+        </div>
+    </div>
+
+    <h2 id="summary">Summary</h2>
+
+    <div class="temperature">
+        <div class="degree-section">
+            
+            <div id="icon" width="128" height="128"></div>
+            <!--<div id="icon" width="128" height="128"></div>-->
+            <h2 id="temperatureDegree"></h2>
+            <span id="temperatureSpan" style = "font-family: sans-serif; font-size:2.5em;">℃</span>
+            <br>
+            <label id="celsiusFarenheit"><input type="radio">  Change to Farenheit</label>
+        </div>
+    </div>
+
+
+    <div class="parent1">
+        <div class="column">
+            <p id="minTemp"><i class="fas fa-long-arrow-alt-down"></i> Min: </p>
+            <p id="apparentTemperature"> Feels like: </p>
+            <p id="humidity" class="wi wi-humidity"> Humidity: </p>
+
+           
+        </div>
+        <div class="column">
+            <p id="maxTemp"><i class="fas fa-long-arrow-alt-up"></i> Max: </p> 
+            <p id="windSpeed"><i class="fas fa-wind"></i> Wind speed: </p> 
+            <p id="pressure" class="wi wi-windy"> Pressure: </p>
+        </div>
+    </div>
+
+<script src="dateTime.js"></script>
+<script src="currentWeather.js"></script>
+<script src="https://kit.fontawesome.com/bcd5f28a59.js" crossorigin="anonymous"></script>
+</body>
+</html>

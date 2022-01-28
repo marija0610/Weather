@@ -1,0 +1,238 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    height:100vh;
+    display: flex;
+    /*justify-content: center;*/
+    flex-direction:column;
+    /*align-items: center;*/
+    /*background: linear-gradient(90deg,rgb(65,105,225),rgb(102,51,153));
+    /*font-family: sans-serif;*/
+    color:white;
+    background-color: rgba(0,0,0,75%);
+    background-image: url("img/pozadina1.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1{
+    font-size: 4em;
+    font-family:'Bungee Shade';
+    text-align: center;
+}
+
+h2{
+    font-size: 4em;
+    font-family: 'Lobster';
+    text-align: center;
+}
+
+.dateTime{
+    position: relative;
+    /*background-color: rgb(255, 182, 193); 5d198e*/
+    /*background: linear-gradient(#9c73ba,transparent,#5d198e);*/
+    background: linear-gradient(35deg, rgba(2,0,36,0.3) 0%, rgba(9,9,121,0.3) 35%, rgba(0,212,255,0.3) 100%);
+    background-blend-mode: multiply;
+    /*
+    background-color: rgba(255,255,255,0.3);*/
+    /*background-color: rgba(111,111,111,0.4);*/
+    width:455px;
+    height: 200px;
+    font-size:70%;
+    flex-wrap: wrap;
+    border-radius: 20% 50% / 50% 20%;
+    text-align: center;
+    padding-top:40px;
+    /*font-family: 'Lobster', cursive;*/
+    bottom:13%;
+    right:1%;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top:6rem;
+}
+
+.temperature{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.location{
+    bottom:10%;
+    position: relative;
+    /*background: linear-gradient(#9c73ba,transparent,#5d198e);
+    background-color: rgba(111,111,111,0.7);
+    */background-color: rgba(111,111,111,0.4);
+    background: linear-gradient(35deg, rgba(2,0,36,0.3) 0%, rgba(9,9,121,0.3) 35%, rgba(0,212,255,0.3) 100%);
+    background-blend-mode: multiply;
+    width:455px;
+    height: 200px;
+    font-size:70%;
+    flex-wrap: wrap;
+    border-radius: 50% 20% / 20% 50%;
+    padding-top:40px;
+    text-align: center;
+    /*background-image: url("img/map.jpg");
+    background-color: rgba(black,black,black,90%);
+    background-blend-mode: multiply;
+    background-size: cover;*/
+
+}
+
+.temperature{
+    flex-direction: column;
+}
+
+/*
+.column {
+    float: left;
+    width: 70%;
+}*/
+
+.parent1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    font-size:120%;
+}
+
+
+.degree-section{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.degree-section span{
+    margin: 10px;
+    font-size: 30px;
+}
+
+.degree-section h2{
+    font-size: 40px;
+}
+h4 {
+    font-size: 2.5em;
+    display: block;
+    padding: 5px 0px;
+}
+
+#celsiusFarenheit{
+    font-size: 1.2em;
+    flex-direction: column;
+}
+
+#icon{
+    -webkit-filter : grayscale(5) brightness(20000%);
+    filter: grayscale(5) brightness(20000%);
+}
+
+#pressure{
+    width:300px;
+}
+
+
+#humidity{
+    width: 200px;
+}
+
+#windSpeed{
+    width: 200px;
+}
+.parent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: left;
+}
+
+.parent:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.nameApp{
+    position: absolute;
+    float:left;
+    left: 90px;
+    padding-top:20px;
+    padding-left:5px;
+    font-size:2rem;
+    font-family: 'Lobster', cursive;
+}
+
+.logo{
+    position: relative;
+    float: left;
+    left:.5rem;
+    top: .5rem;
+    bottom: .5rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    overflow: hidden;
+    font-family: 'Open Sans';
+    font-size: 2rem;
+}
+
+.logo::before{
+    content:"";
+    background: url("img/logo.png");
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background-size: cover;
+}
+
+.logo::after{
+    content:"";
+    position: absolute;
+    width:200%;
+    height: 200%;
+    background-color: hsla(0 ,0%,100%, .7);
+    bottom:0;
+    left:-50%;
+    border-radius: 35%;
+    animation: waves 5s ease-in-out alternate infinite;
+    bottom:10%;
+}
+
+@keyframes waves{
+    to{
+        transform: translateY(-50%) rotate(540deg);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        background-color: rgba(0,0,0,75%);
+        background-image: url("img/pozadina2.jpg");
+        background-blend-mode: multiply;
+        background-size: cover;
+    
+    }
+
+    .parent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+  }
