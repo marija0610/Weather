@@ -1,3 +1,4 @@
+
 const sucessfullLookup = (position) =>{
     const{latitude, longitude} = position.coords;
     fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=9bc8ad78fcdf48a08bdf73a8ed8c5a34`)
@@ -14,7 +15,7 @@ navigator.geolocation.getCurrentPosition(sucessfullLookup, console.log)
 
 const temperature = async (position) => {
     const {latitude, longitude} = position.coords;
-    const api = '617e3eef5732240c255eca261301ba8e    ';
+    const api = config; //api key goes here
     fetch(await `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${api}`, {
         "method": "GET",
     }).then(response => {
@@ -41,8 +42,7 @@ const temperature = async (position) => {
         humidity.textContent = " Humidity: " + Math.floor(data.main.humidity) + " %";
 
         maxTemp.innerHTML = `<p id="maxTemp"><i class="fas fa-long-arrow-alt-up"></i> Max: `+ kelvinToCelsius(data.main.temp_max)+`℃</p> `;
-        windSpeed.textContent = milesToKm(data.wind.speed) + " km/h";
-        windSpeed.innerHTML = `<p id="windSpeed"><i class="fas fa-wind"></i> Wind speed: ` + windSpeed.textContent +`</p>`;
+        windSpeed.innerHTML = `<p id="windSpeed"><i class="fas fa-wind"></i> Wind speed: ` + milesToKm(data.wind.speed)+` km/h</p>`;
         pressure.textContent=" Pressure: " + data.main.pressure + " mb";
 
         celsiusFarenheit.addEventListener('click', ()=>{

@@ -104,12 +104,18 @@ h2{
 .parent1{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
     position: relative;
     justify-content: center;
     font-size:120%;
 }
+
+.parent1:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
 
 .degree-section{
@@ -151,9 +157,6 @@ h4 {
     width: 200px;
 }
 
-#windSpeed{
-    width: 200px;
-}
 .parent{
     display: flex;
     flex-direction: row;
@@ -230,9 +233,9 @@ h4 {
     
     }
 
-    .parent{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    .parent1{
+        display: inline;
+        text-align: center;
+        padding-bottom: 10%;
     }
   }
